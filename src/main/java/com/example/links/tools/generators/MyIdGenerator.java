@@ -29,7 +29,6 @@ public class MyIdGenerator implements BeforeExecutionGenerator {
         List<String> result = session.createQuery(query, String.class)
                 .setParameter("id", id)
                 .list();
-        System.out.println("size: " + result.size());
         return !result.isEmpty();
     }
 
