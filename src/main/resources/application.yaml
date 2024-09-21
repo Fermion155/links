@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: links
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/linksdb
+    username: links_user
+    password: links_password
+custom-properties:
+  link: http://localhost:8080/
+---
+
+spring:
+  config:
+    activate:
+      on-profile: production
+  datasource:
+    url: ENTER_URL
+    username: USER
+    password: PASS
+custom-properties:
+  link: HOST_ADDRESS
