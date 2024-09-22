@@ -34,7 +34,7 @@ Url shortener REST application which provides a shorter version of the url, whic
 ## Usage
 
  The application will be accessible at ``localhost:8080/``   
- To get a shortened url use `` POST `` request ``localhost:8080/`` with plain text body:  
+ To get a shortened url use `` POST `` request ``localhost:8080/`` with plain text request body:  
  ```sh
  wwww.example.com
  ```
