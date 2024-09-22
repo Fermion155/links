@@ -33,7 +33,8 @@ jobs:
       - run: docker-compose up -d
       - name: Check if container db is running
         run: |
-          if [ $(docker ps -qf name="db") ] then
+          if [ $(docker ps -qf name="db") ]
+          then
             echo "Container db is running"
           else
             echo "Container db is NOT running"
@@ -41,7 +42,8 @@ jobs:
           fi
       - name: Check if container app is running
         run: |
-          if [ $(docker ps -qf name="app") ] then
+          if [ $(docker ps -qf name="app") ]
+          then
             echo "Container app is running"
           else
             echo "Container app is NOT running"
