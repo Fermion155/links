@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    container_name: app
+    ports:
+      - 8080:8080
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mysql:9.0.1
+    container_name: db
+    ports:
+      - 3307:3306
+    restart: always
+    volumes:
+      - myvolume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: linksdb
+      MYSQL_USER: links_user
+      MYSQL_PASSWORD: links_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-u root", "-p root",  "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+volumes:
+  myvolume:

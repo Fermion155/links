@@ -12,7 +12,7 @@ spring:
     activate:
       on-profile: local
   datasource:
-    url: jdbc:mysql://localhost:3306/linksdb
+    url: jdbc:mysql://localhost:3307/linksdb
     username: links_user
     password: links_password
 custom-properties:
@@ -22,10 +22,10 @@ custom-properties:
 spring:
   config:
     activate:
-      on-profile: production
+      on-profile: docker
   datasource:
-    url: ENTER_URL
-    username: USER
-    password: PASS
+    url: jdbc:mysql://db:3306/linksdb
+    username: links_user
+    password: links_password
 custom-properties:
-  link: HOST_ADDRESS
+  link: http://localhost:8080/
