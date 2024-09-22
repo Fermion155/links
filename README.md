@@ -11,7 +11,7 @@ Url shortener REST application which provides a shorter version of the url, whic
 
 1. Clone the repository:
    ``` sh
-   https://github.com/Fermion155/links.git
+   git clone https://github.com/Fermion155/links.git
    ```
 2. Navigate to the project directory:
     ```sh
