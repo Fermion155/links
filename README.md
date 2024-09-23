@@ -6,6 +6,7 @@ Url shortener REST application which provides a shorter version of the url, whic
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Ownership](#ownership)
 
 ## Installation
 
@@ -42,4 +43,8 @@ Result will be a shortened link:
 ```sh
 http://localhost:8080/5symmlQ
 ```
-Use ``GET`` request on the received link and you will be redirected to the requested url.
+Use ``GET`` request on the received link and you will be redirected to the requested url.  
+
+## Ownership
+
+This project is maintained and owned by Paulius Drabužinskis
